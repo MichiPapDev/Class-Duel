@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://o4ty0w6blb6j"]
+
+[ext_resource type="Script" uid="uid://c44v0jdmwns4e" path="res://players/maguita/maguita.gd" id="1_2ocgi"]
+[ext_resource type="Texture2D" uid="uid://bws6s37fbwmqq" path="res://asset/mage/maguita/base-maguita.png" id="2_jekr4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jgrdb"]
+radius = 4.0
+height = 26.0
+
+[node name="Maguita" type="CharacterBody2D" unique_id=2142974029]
+script = ExtResource("1_2ocgi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1943174724]
+texture = ExtResource("2_jekr4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1788671248]
+shape = SubResource("CapsuleShape2D_jgrdb")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1819711060]
+zoom = Vector2(3, 3)

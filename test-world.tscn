@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ur6g8jaukoi7"]
+
+[ext_resource type="PackedScene" uid="uid://o4ty0w6blb6j" path="res://players/maguita/maguita.tscn" id="1_2qb1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jt1q"]
+size = Vector2(336, 50)
+
+[node name="TestWorld" type="Node2D" unique_id=663186972]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=186889750]
+position = Vector2(631, 531)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1363578348]
+shape = SubResource("RectangleShape2D_6jt1q")
+
+[node name="Maguita" parent="." unique_id=2142974029 instance=ExtResource("1_2qb1l")]
+position = Vector2(589, 335)
