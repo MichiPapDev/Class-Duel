@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dnouuugyeg4ts"]
+
+[ext_resource type="Script" uid="uid://cctvo4pjotvvr" path="res://menu/juego.gd" id="1_j0t7f"]
+
+[node name="Menu" type="Node2D" unique_id=1812635578]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=523116208]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=514763851]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=215352361]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1279764343]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=241853872]
+layout_mode = 2
+text = "T"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1324240686]
+layout_mode = 2
+alignment = 2
+
+[node name="historia" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=766019225]
+layout_mode = 2
+text = "Historia (proceso)"
+
+[node name="juego" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=3449294]
+layout_mode = 2
+text = "Juego"
+script = ExtResource("1_j0t7f")
+
+[node name="continuar" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=474948182]
+layout_mode = 2
+text = "Continuar"
+
+[node name="ajutes" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=610217446]
+layout_mode = 2
+text = "Ajustes"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1604275315]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/HBoxContainer2" unique_id=1787402130]
+layout_mode = 2
+text = "T"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=170824954]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=181558088]
+layout_mode = 2
+text = "version dev 0"
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer2" unique_id=1650817575]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "logo michipap"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer/juego" to="CanvasLayer/VBoxContainer/HBoxContainer/VBoxContainer/juego" method="_on_pressed"]
